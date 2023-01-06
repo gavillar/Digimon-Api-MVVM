@@ -4,18 +4,20 @@
 //
 //  Created by user220831 on 1/5/23.
 //
-
+protocol sendCoordinatorIntroView: AnyObject {
+    func chooseDigimon()
+}
 import Foundation
 import UIKit
 
 class IntroTableView: UITableView {
-    var introviewmodel = IntroViewModel()
+    weak var sendDelegate: sendCoordinatorIntroView?
+    var viewModel = ViewModel()
     
     override init(frame: CGRect, style: UITableView.Style) {
         super.init(frame: frame, style: style)
         setupTableView()
-        introviewmodel.sendDigimonsDataDelegate = self
-        
+        viewModel.sendDigimonsDataDelegate = self
     }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -26,12 +28,11 @@ class IntroTableView: UITableView {
         delegate = self
         dataSource = self
     }
-    
 }
 
 extension IntroTableView: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        introviewmodel.count
+        ViewModel.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -39,7 +40,7 @@ extension IntroTableView: UITableViewDelegate, UITableViewDataSource {
     }
         func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: IntroViewCustomCell.indentifierIntroCell, for: indexPath) as? IntroViewCustomCell
-        cell?.updateForm(data: introviewmodel.digimon[indexPath.row])
+            cell?.updateForm(data: ViewModel.digimons[indexPath.row])
         return cell ?? UITableViewCell()
     }
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
@@ -48,9 +49,11 @@ extension IntroTableView: UITableViewDelegate, UITableViewDataSource {
         label.font = UIFont.systemFont(ofSize: 30)
         return label
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        sendDelegate?.chooseDigimon()
+        ViewModel.chooseDigimon = indexPath.row
+    }
 }
-
-
 extension IntroTableView: SendDigimonsDataIntroViewModel {
     func reloadTableView(data: [DigimonModel]) {
         Task {

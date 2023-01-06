@@ -11,7 +11,6 @@ import UIKit
 extension Create {
     static func navigationController(rootViewController: UIViewController) -> UINavigationController {
         let navigationController = UINavigationController(rootViewController: rootViewController)
-      //  navigationController.navigationBar.tintColor = Assets.Colors.reverseDark
         navigationController.navigationBar.prefersLargeTitles = true
         let standardAppearance = UINavigationBarAppearance()
         standardAppearance.configureWithOpaqueBackground()

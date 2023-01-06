@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27A055472968584200511F3C /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A055462968584200511F3C /* AppCoordinator.swift */; };
+		27A0554A2968595800511F3C /* CoordinatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A055492968595800511F3C /* CoordinatedViewController.swift */; };
+		27A0554D296861EE00511F3C /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0554C296861EE00511F3C /* LevelViewController.swift */; };
+		27A0554F296897DA00511F3C /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0554E296897DA00511F3C /* LevelViewModel.swift */; };
 		27C47CC829670C3F003B8D7D /* IntroTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C47CC729670C3F003B8D7D /* IntroTableView.swift */; };
 		27DDE6E8296617AF004B9737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6E7296617AF004B9737 /* AppDelegate.swift */; };
 		27DDE6EA296617AF004B9737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6E9296617AF004B9737 /* SceneDelegate.swift */; };
@@ -20,8 +24,8 @@
 		27DDE71F29661A01004B9737 /* Create.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE71E29661A01004B9737 /* Create.swift */; };
 		27DDE72329661F44004B9737 /* IntroViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72229661F44004B9737 /* IntroViewController.swift */; };
 		27DDE72629661F61004B9737 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72529661F61004B9737 /* Network.swift */; };
-		27DDE72829661F73004B9737 /* IntroViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72729661F73004B9737 /* IntroViewModel.swift */; };
-		27DDE72A29661F7D004B9737 /* IntroModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72929661F7D004B9737 /* IntroModel.swift */; };
+		27DDE72829661F73004B9737 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72729661F73004B9737 /* ViewModel.swift */; };
+		27DDE72A29661F7D004B9737 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72929661F7D004B9737 /* Model.swift */; };
 		27DDE72C2966230D004B9737 /* IntroViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE72B2966230D004B9737 /* IntroViewCustomCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -43,6 +47,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		27A055462968584200511F3C /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		27A055492968595800511F3C /* CoordinatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewController.swift; sourceTree = "<group>"; };
+		27A0554C296861EE00511F3C /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
+		27A0554E296897DA00511F3C /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
 		27C47CC729670C3F003B8D7D /* IntroTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTableView.swift; sourceTree = "<group>"; };
 		27DDE6E4296617AF004B9737 /* DigimonAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimonAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DDE6E7296617AF004B9737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -60,8 +68,8 @@
 		27DDE71E29661A01004B9737 /* Create.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Create.swift; sourceTree = "<group>"; };
 		27DDE72229661F44004B9737 /* IntroViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewController.swift; sourceTree = "<group>"; };
 		27DDE72529661F61004B9737 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
-		27DDE72729661F73004B9737 /* IntroViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewModel.swift; sourceTree = "<group>"; };
-		27DDE72929661F7D004B9737 /* IntroModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroModel.swift; sourceTree = "<group>"; };
+		27DDE72729661F73004B9737 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		27DDE72929661F7D004B9737 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		27DDE72B2966230D004B9737 /* IntroViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroViewCustomCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -90,6 +98,49 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		271A75222968BB2D00C27CC4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				27DDE72929661F7D004B9737 /* Model.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		271A75232968BB3600C27CC4 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				27DDE72729661F73004B9737 /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		27A05545296857F400511F3C /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				27DDE6E9296617AF004B9737 /* SceneDelegate.swift */,
+				27DDE6E7296617AF004B9737 /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		27A055482968593B00511F3C /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				27A055462968584200511F3C /* AppCoordinator.swift */,
+				27A055492968595800511F3C /* CoordinatedViewController.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		27A0554B2968615B00511F3C /* Level */ = {
+			isa = PBXGroup;
+			children = (
+				27A0554C296861EE00511F3C /* LevelViewController.swift */,
+				27A0554E296897DA00511F3C /* LevelViewModel.swift */,
+			);
+			path = Level;
+			sourceTree = "<group>";
+		};
 		27DDE6DB296617AF004B9737 = {
 			isa = PBXGroup;
 			children = (
@@ -113,15 +164,17 @@
 		27DDE6E6296617AF004B9737 /* DigimonAPI */ = {
 			isa = PBXGroup;
 			children = (
-				27DDE72429661F4B004B9737 /* Network */,
-				27DDE72029661EC7004B9737 /* Features */,
-				27DDE71A29661906004B9737 /* Utils */,
-				27DDE6E7296617AF004B9737 /* AppDelegate.swift */,
-				27DDE6E9296617AF004B9737 /* SceneDelegate.swift */,
+				27A05545296857F400511F3C /* AppDelegate */,
 				27DDE6F3296617B0004B9737 /* Assets.xcassets */,
-				27DDE6F5296617B0004B9737 /* LaunchScreen.storyboard */,
-				27DDE6F8296617B0004B9737 /* Info.plist */,
+				27A055482968593B00511F3C /* Coordinator */,
 				27DDE6F0296617AF004B9737 /* DigimonAPI.xcdatamodeld */,
+				27DDE6F8296617B0004B9737 /* Info.plist */,
+				27DDE6F5296617B0004B9737 /* LaunchScreen.storyboard */,
+				271A75222968BB2D00C27CC4 /* Model */,
+				27DDE72429661F4B004B9737 /* Network */,
+				27DDE72029661EC7004B9737 /* Sources */,
+				27DDE71A29661906004B9737 /* Utils */,
+				271A75232968BB3600C27CC4 /* ViewModel */,
 			);
 			path = DigimonAPI;
 			sourceTree = "<group>";
@@ -160,20 +213,19 @@
 			path = Create;
 			sourceTree = "<group>";
 		};
-		27DDE72029661EC7004B9737 /* Features */ = {
+		27DDE72029661EC7004B9737 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
 				27DDE72129661EE2004B9737 /* Intro */,
+				27A0554B2968615B00511F3C /* Level */,
 			);
-			path = Features;
+			path = Sources;
 			sourceTree = "<group>";
 		};
 		27DDE72129661EE2004B9737 /* Intro */ = {
 			isa = PBXGroup;
 			children = (
 				27DDE72229661F44004B9737 /* IntroViewController.swift */,
-				27DDE72729661F73004B9737 /* IntroViewModel.swift */,
-				27DDE72929661F7D004B9737 /* IntroModel.swift */,
 				27DDE72B2966230D004B9737 /* IntroViewCustomCell.swift */,
 				27C47CC729670C3F003B8D7D /* IntroTableView.swift */,
 			);
@@ -322,17 +374,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27A0554A2968595800511F3C /* CoordinatedViewController.swift in Sources */,
+				27A055472968584200511F3C /* AppCoordinator.swift in Sources */,
 				27DDE6F2296617AF004B9737 /* DigimonAPI.xcdatamodeld in Sources */,
 				27DDE71D2966192E004B9737 /* Create+NavigationController.swift in Sources */,
 				27DDE6E8296617AF004B9737 /* AppDelegate.swift in Sources */,
 				27DDE6EA296617AF004B9737 /* SceneDelegate.swift in Sources */,
 				27DDE71F29661A01004B9737 /* Create.swift in Sources */,
+				27A0554D296861EE00511F3C /* LevelViewController.swift in Sources */,
 				27C47CC829670C3F003B8D7D /* IntroTableView.swift in Sources */,
 				27DDE72629661F61004B9737 /* Network.swift in Sources */,
 				27DDE72C2966230D004B9737 /* IntroViewCustomCell.swift in Sources */,
 				27DDE72329661F44004B9737 /* IntroViewController.swift in Sources */,
-				27DDE72A29661F7D004B9737 /* IntroModel.swift in Sources */,
-				27DDE72829661F73004B9737 /* IntroViewModel.swift in Sources */,
+				27A0554F296897DA00511F3C /* LevelViewModel.swift in Sources */,
+				27DDE72A29661F7D004B9737 /* Model.swift in Sources */,
+				27DDE72829661F73004B9737 /* ViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

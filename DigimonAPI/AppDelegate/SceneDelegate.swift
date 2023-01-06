@@ -21,8 +21,9 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // (see `application:configurationForConnectingSceneSession` instead).
         guard let windowScene = (scene as? UIWindowScene) else {return}
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = Create.navigationController(rootViewController: IntroViewController())
-        window?.makeKeyAndVisible()
+        
+        let coordinator = Coordinator(window: window)
+        coordinator.start()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

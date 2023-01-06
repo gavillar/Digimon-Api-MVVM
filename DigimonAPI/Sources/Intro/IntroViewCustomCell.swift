@@ -9,10 +9,10 @@ import Foundation
 import UIKit
 
 class IntroViewCustomCell: UITableViewCell {
-    var introviewmodel = IntroViewModel()
     static let indentifierIntroCell = "indentifierIntroCell"
-
-    let characterView: UIImageView = {
+    let viewModel = ViewModel()
+    
+    lazy var characterView: UIImageView = {
         let view = UIImageView()
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -41,7 +41,7 @@ class IntroViewCustomCell: UITableViewCell {
         contentView.addSubview(characterView)
         contentView.addSubview(nameLabel)
         setupConstrains()
-        introviewmodel.sendDigimonsDataDelegate = self
+        viewModel.sendDigimonsDataDelegate = self
 }
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -53,7 +53,8 @@ extension IntroViewCustomCell: SendDigimonsDataIntroViewModel {
     func updateForm(data: DigimonModel) {
         Task {
             nameLabel.text = data.name
-            guard let data = await Network.call(from: URL(string: data.img)) else {return}
+            guard let image = data.img else {return}
+            guard let data = await Network.call(from: URL(string: image)) else {return}
             characterView.image = UIImage(data: data)
         }
     }
