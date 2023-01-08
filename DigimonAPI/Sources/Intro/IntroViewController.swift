@@ -31,7 +31,7 @@ class IntroViewController: UIViewController{
     }
 }
 
-extension IntroViewController: sendCoordinatorIntroView {
+extension IntroViewController: SendCoordinatorIntroView {
     func chooseDigimon() {
         coordinator?.showLevelViewController()
     }

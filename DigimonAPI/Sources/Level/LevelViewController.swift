@@ -16,7 +16,7 @@ class LevelViewController: UIViewController {
     lazy var digimonImage: UIImageView = {
         let view = UIImageView()
         Task{
-            view.image = await viewModel.getDigimonImages(index: ViewModel.chooseDigimon)
+            view.image = await viewModel.getDigimonImages(index: ViewModel.selectedIndex)
         }
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
@@ -27,7 +27,7 @@ class LevelViewController: UIViewController {
         label.font = .systemFont(ofSize: 35)
         label.numberOfLines = 0
         label.textAlignment = .center
-        label.text = "Level\n" + viewModel.getDigimonLevel(ViewModel.chooseDigimon)
+        label.text = "Level\n" + viewModel.getDigimonLevel(ViewModel.selectedIndex)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -37,7 +37,7 @@ class LevelViewController: UIViewController {
         view.backgroundColor = .white
         self.navigationController?.navigationBar.prefersLargeTitles = true
         self.navigationItem.largeTitleDisplayMode = .always
-        title = viewModel.getDigimonName(ViewModel.chooseDigimon)
+        title = viewModel.getDigimonName(ViewModel.selectedIndex)
         setupView()
         setupConstrains()
         
