@@ -33,10 +33,10 @@ class ViewModel {
     }
     // MARK: - get
     private func get() {
-        Task {
+        Task { [weak self] in
             guard let data = await Network.call(from:Network.EndPoints.digimonData) else {return}
             guard let decode = await Network.decode([DigimonModel].self, from: data) else {return}
-            self.sendDigimonsDataDelegate?.reloadTableView(data: decode)
+            self?.sendDigimonsDataDelegate?.reloadTableView(data: decode)
             ViewModel.digimons = decode
         }
     }
