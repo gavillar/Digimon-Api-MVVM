@@ -40,15 +40,15 @@ class ViewModel {
             ViewModel.digimons = decode
         }
     }
-    lazy var getDigimonName = { (index: Int) -> String in
+    lazy var getDigimonName = { [weak self] (index: Int) -> String in
         return ViewModel.digimons[index].name ?? ""
     }
-    func getDigimonImages(index: Int) async -> UIImage? {
+    lazy var getDigimonImages = { [weak self] (index: Int) -> UIImage? in
         guard let img = ViewModel.digimons[index].img else {return nil}
         guard let data = await Network.call(from: URL(string: img)) else {return nil}
             return UIImage(data: data)
     }
-    lazy var getDigimonLevel = { (index: Int) -> String in
+    lazy var getDigimonLevel = { [weak self] (index: Int) -> String in
         return ViewModel.digimons[index].level ?? ""
     }
 }

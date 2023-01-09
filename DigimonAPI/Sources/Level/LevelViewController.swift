@@ -8,7 +8,6 @@
 import Foundation
 import UIKit
 
-
 class LevelViewController: UIViewController {
     var coordinator: Coordinator?
     let viewModel = ViewModel()
@@ -16,7 +15,7 @@ class LevelViewController: UIViewController {
     lazy var digimonImage: UIImageView = {
         let view = UIImageView()
         Task{
-            view.image = await viewModel.getDigimonImages(index: ViewModel.selectedIndex)
+            view.image = await viewModel.getDigimonImages(ViewModel.selectedIndex)
         }
         view.translatesAutoresizingMaskIntoConstraints = false
         return view
