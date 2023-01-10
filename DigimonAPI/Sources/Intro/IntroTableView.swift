@@ -7,15 +7,16 @@
 protocol SendCoordinatorIntroView: AnyObject {
     func chooseDigimon()
 }
-protocol DigimonIndexObserver: AnyObject {
-    func didSelectDigimon(index: Int)
-}
+//protocol DigimonIndexObserver: AnyObject {
+//    func didSelectDigimon(index: Int)
+//}
 import Foundation
 import UIKit
 
 class IntroTableView: UITableView {
     weak var sendDelegate: SendCoordinatorIntroView?
     
+//    weak var observerIndexPath: ObserverIndexPath?
     
     var viewModel = ViewModel()
     
@@ -55,8 +56,9 @@ extension IntroTableView: UITableViewDelegate, UITableViewDataSource {
         return label
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let observerIndexPath = ObserverIndexPath()
+        observerIndexPath.observerIndexPath(indexPath.row)
         sendDelegate?.chooseDigimon()
-        viewModel.observerIndexPath(indexPath.row)
     }
 }
 extension IntroTableView: SendDigimonsDataIntroViewModel {

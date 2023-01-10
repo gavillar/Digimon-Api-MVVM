@@ -15,15 +15,9 @@ protocol SendDigimonsDataIntroViewModel: AnyObject {
 
 class ViewModel {
     weak var sendDigimonsDataDelegate: SendDigimonsDataIntroViewModel?
-    weak var indexObserver: DigimonIndexObserver?
-    
+
     static var digimons = Digimons()
     
-    static var selectedIndex: Int = 0
-    
-    lazy var observerIndexPath = {(index: Int) -> () in
-        return ViewModel.selectedIndex = index
-    }
     static var count: Int {
         return ViewModel.digimons.count
     }

@@ -11,6 +11,7 @@
 		27A0554A2968595800511F3C /* CoordinatedViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A055492968595800511F3C /* CoordinatedViewController.swift */; };
 		27A0554D296861EE00511F3C /* LevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0554C296861EE00511F3C /* LevelViewController.swift */; };
 		27A0554F296897DA00511F3C /* LevelViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27A0554E296897DA00511F3C /* LevelViewModel.swift */; };
+		27BFF658296DCE420029B38B /* ObserverIndexPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27BFF657296DCE420029B38B /* ObserverIndexPath.swift */; };
 		27C47CC829670C3F003B8D7D /* IntroTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27C47CC729670C3F003B8D7D /* IntroTableView.swift */; };
 		27DDE6E8296617AF004B9737 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6E7296617AF004B9737 /* AppDelegate.swift */; };
 		27DDE6EA296617AF004B9737 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 27DDE6E9296617AF004B9737 /* SceneDelegate.swift */; };
@@ -51,6 +52,7 @@
 		27A055492968595800511F3C /* CoordinatedViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoordinatedViewController.swift; sourceTree = "<group>"; };
 		27A0554C296861EE00511F3C /* LevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewController.swift; sourceTree = "<group>"; };
 		27A0554E296897DA00511F3C /* LevelViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LevelViewModel.swift; sourceTree = "<group>"; };
+		27BFF657296DCE420029B38B /* ObserverIndexPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObserverIndexPath.swift; sourceTree = "<group>"; };
 		27C47CC729670C3F003B8D7D /* IntroTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IntroTableView.swift; sourceTree = "<group>"; };
 		27DDE6E4296617AF004B9737 /* DigimonAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigimonAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		27DDE6E7296617AF004B9737 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -141,6 +143,14 @@
 			path = Level;
 			sourceTree = "<group>";
 		};
+		27BFF656296DCE2A0029B38B /* Observers */ = {
+			isa = PBXGroup;
+			children = (
+				27BFF657296DCE420029B38B /* ObserverIndexPath.swift */,
+			);
+			path = Observers;
+			sourceTree = "<group>";
+		};
 		27DDE6DB296617AF004B9737 = {
 			isa = PBXGroup;
 			children = (
@@ -164,6 +174,7 @@
 		27DDE6E6296617AF004B9737 /* DigimonAPI */ = {
 			isa = PBXGroup;
 			children = (
+				27BFF656296DCE2A0029B38B /* Observers */,
 				27A05545296857F400511F3C /* AppDelegate */,
 				27DDE6F3296617B0004B9737 /* Assets.xcassets */,
 				27A055482968593B00511F3C /* Coordinator */,
@@ -389,6 +400,7 @@
 				27A0554F296897DA00511F3C /* LevelViewModel.swift in Sources */,
 				27DDE72A29661F7D004B9737 /* Model.swift in Sources */,
 				27DDE72829661F73004B9737 /* ViewModel.swift in Sources */,
+				27BFF658296DCE420029B38B /* ObserverIndexPath.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
