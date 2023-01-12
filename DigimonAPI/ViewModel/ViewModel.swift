@@ -21,7 +21,6 @@ class ViewModel {
     static var count: Int {
         return ViewModel.digimons.count
     }
-    
     init() {
         get()
     }

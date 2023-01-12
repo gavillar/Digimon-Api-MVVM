@@ -7,16 +7,12 @@
 protocol SendCoordinatorIntroView: AnyObject {
     func chooseDigimon()
 }
-//protocol DigimonIndexObserver: AnyObject {
-//    func didSelectDigimon(index: Int)
-//}
 import Foundation
 import UIKit
 
 class IntroTableView: UITableView {
-    weak var sendDelegate: SendCoordinatorIntroView?
     
-//    weak var observerIndexPath: ObserverIndexPath?
+    weak var sendDelegate: SendCoordinatorIntroView?
     
     var viewModel = ViewModel()
     

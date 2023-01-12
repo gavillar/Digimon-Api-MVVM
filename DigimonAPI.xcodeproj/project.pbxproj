@@ -174,7 +174,6 @@
 		27DDE6E6296617AF004B9737 /* DigimonAPI */ = {
 			isa = PBXGroup;
 			children = (
-				27BFF656296DCE2A0029B38B /* Observers */,
 				27A05545296857F400511F3C /* AppDelegate */,
 				27DDE6F3296617B0004B9737 /* Assets.xcassets */,
 				27A055482968593B00511F3C /* Coordinator */,
@@ -183,6 +182,7 @@
 				27DDE6F5296617B0004B9737 /* LaunchScreen.storyboard */,
 				271A75222968BB2D00C27CC4 /* Model */,
 				27DDE72429661F4B004B9737 /* Network */,
+				27BFF656296DCE2A0029B38B /* Observers */,
 				27DDE72029661EC7004B9737 /* Sources */,
 				27DDE71A29661906004B9737 /* Utils */,
 				271A75232968BB3600C27CC4 /* ViewModel */,
